@@ -17,8 +17,8 @@ TC01_Get_All_Users
    Should Be Equal As Integers       ${response.status_code}     200
 
 TC02_GET_User_Info
-   Create Session    GET_User             ${URL}            verify=true
-   ${response}       GET On Session       GET_User          /users/1
+   Create Session    GET_User_Info             ${URL}                 verify=true
+   ${response}       GET On Session            GET_User_Info          /users/1
    Log    ${response.status_code}
    Log    ${response.headers}
    Log    ${response.content}
